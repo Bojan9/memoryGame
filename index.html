@@ -8,71 +8,93 @@
 
 <body>
 
-    <div class="memory-game">
-        <div class="memory-card" data-framework="foxtrot">
-            <img class="front-img" src="/img/signalflag-foxtrot.png" alt="foxtrot">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-
+    <div class="wrap">
+        <div class="memory-text">
+            <h1>Memory Game</h1>
+            <div class="memory-text2">Time: <span id="time">0mins 0secs</span></div>
+            <div class="memory-text2">Flips: <span id="flips">0</span></div>
         </div>
 
-        <div class="memory-card" data-framework="foxtrot">
-            <img class="front-img" src="/img/signalflag-foxtrot.png" alt="foxtrot">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
+        <div class="memory-game">
+            <div class="memory-card" data-framework="foxtrot">
+                <img class="front-img" src="/img/signalflag-foxtrot.png" alt="foxtrot">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+            <div class="memory-card" data-framework="foxtrot">
+                <img class="front-img" src="/img/signalflag-foxtrot.png" alt="foxtrot">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="golf">
+                <img class="front-img" src="/img/signalflag-golf.png" alt="golf">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="golf">
+                <img class="front-img" src="/img/signalflag-golf.png" alt="golf">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="juliet">
+                <img class="front-img" src="/img/signalflag-juliet.png" alt="juliet">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="juliet">
+                <img class="front-img" src="/img/signalflag-juliet.png" alt="juliet">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="lima">
+                <img class="front-img" src="/img/signalflag-lima.png" alt="lima">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="lima">
+                <img class="front-img" src="/img/signalflag-lima.png" alt="lima">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="november">
+                <img class="front-img" src="/img/signalflag-november.png" alt="november">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="november">
+                <img class="front-img" src="/img/signalflag-november.png" alt="november">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="romeo">
+                <img class="front-img" src="/img/signalflag-romeo.png" alt="romeo">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
+
+            <div class="memory-card" data-framework="romeo">
+                <img class="front-img" src="/img/signalflag-romeo.png" alt="romeo">
+                <img class="back-img" src="/img/js-badge.svg" alt="front">
+            </div>
         </div>
 
-        <div class="memory-card" data-framework="golf">
-            <img class="front-img" src="/img/signalflag-golf.png" alt="golf">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <div class="content-1">
+                    Congratulations you're a winner
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Play again
+                </button>
+            </div>
         </div>
 
-        <div class="memory-card" data-framework="golf">
-            <img class="front-img" src="/img/signalflag-golf.png" alt="golf">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="juliet">
-            <img class="front-img" src="/img/signalflag-juliet.png" alt="juliet">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="juliet">
-            <img class="front-img" src="/img/signalflag-juliet.png" alt="juliet">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="lima">
-            <img class="front-img" src="/img/signalflag-lima.png" alt="lima">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="lima">
-            <img class="front-img" src="/img/signalflag-lima.png" alt="lima">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="november">
-            <img class="front-img" src="/img/signalflag-november.png" alt="november">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="november">
-            <img class="front-img" src="/img/signalflag-november.png" alt="november">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="romeo">
-            <img class="front-img" src="/img/signalflag-romeo.png" alt="romeo">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
-
-        <div class="memory-card" data-framework="romeo">
-            <img class="front-img" src="/img/signalflag-romeo.png" alt="romeo">
-            <img class="back-img" src="/img/js-badge.svg" alt="front">
-        </div>
     </div>
-
 </body>
 
 <script src="main.js">
 </script>
+
 </html>
